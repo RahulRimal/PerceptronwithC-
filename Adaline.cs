@@ -15,8 +15,8 @@ public class Adaline
   float learningR = 0.1f;
 
 
-  // Setting up tendency to 0.01
-  float tend = 0.01f;
+  // Setting up tolorance level to 0.01
+  float tol = 0.01f;
 
   public void perceptAlgorithm(int input1, int input2, int target)
   {
@@ -39,7 +39,7 @@ public class Adaline
     float w2Diff = this.w2 - w2Old;
     float bDiff = this.b - bOld;
 
-    if(w1Diff > tend || w2Diff > tend || bDiff > tend)
+    if(w1Diff > tol || w2Diff > tol || bDiff > tol)
     {
       buffer = false;
     }
